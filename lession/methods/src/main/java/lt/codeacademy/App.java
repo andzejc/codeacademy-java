@@ -10,8 +10,7 @@ public class App {
         print("Trys");
         printSimpleText();
         addTwoValues(1, 5);
-        int result = addTwoValuesWithReturn(2, 7);
-        print(result);
+        print(addTwoValuesWithReturn(2, 7));
     }
 
     public static void printSimpleText() {
