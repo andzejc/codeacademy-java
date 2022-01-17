@@ -3,20 +3,25 @@ package lt.codeacademy;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Vienas");
+        print("Vienas");
         for (int i = 0; i < 100; i++) {
-            System.out.println("Du");
+            print("Du");
         }
-        System.out.println("Trys");
+        print("Trys");
         printSimpleText();
         addTwoValues(1, 5);
     }
 
     public static void printSimpleText() {
-        System.out.println("Keturi");
+        print("Keturi");
     }
 
     public static void addTwoValues(int firstValue, int secondValue) {
-        System.out.println(firstValue + secondValue);
+        print(firstValue + secondValue + "");
     }
+
+    public static void print(String text) {
+        System.out.println(text);
+    }
+
 }
