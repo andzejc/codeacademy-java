@@ -10,6 +10,8 @@ public class App {
         print("Trys");
         printSimpleText();
         addTwoValues(1, 5);
+        int result = addTwoValuesWithReturn(2, 7);
+        print(result);
     }
 
     public static void printSimpleText() {
@@ -26,5 +28,9 @@ public class App {
 
     public static void print(int text) {
         print(String.valueOf(text));
+    }
+
+    public static int addTwoValuesWithReturn(int firstValue, int secondValue) {
+        return firstValue + secondValue;
     }
 }
