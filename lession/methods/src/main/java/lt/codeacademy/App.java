@@ -2,31 +2,29 @@ package lt.codeacademy;
 
 public class App {
 
+    static ConsolePrinter printer = new ConsolePrinter();
+
     public static void main(String[] args) {
-        print("Vienas");
+        printer.print("Vienas");
         for (int i = 0; i < 100; i++) {
-            print("Du");
+            printer.print("Du");
         }
-        print("Trys");
+        printer.print("Trys");
         printSimpleText();
         addTwoValues(1, 5);
-        print(addTwoValuesWithReturn(2, 7));
+//        printer.print(addTwoValuesWithReturn(2, 7));
     }
 
     public static void printSimpleText() {
-        print("Keturi");
+        printer.print("Keturi");
     }
 
     public static void addTwoValues(int firstValue, int secondValue) {
-        print(firstValue + secondValue);
-    }
-
-    public static void print(String text) {
-        System.out.println(text);
+//        printer.print(firstValue + secondValue);
     }
 
     public static void print(int text) {
-        print(String.valueOf(text));
+//        print(String.valueOf(text));
     }
 
     public static int addTwoValuesWithReturn(int firstValue, int secondValue) {
