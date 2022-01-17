@@ -12,7 +12,7 @@ public class App {
         printer.print("Trys");
         printSimpleText();
         addTwoValues(1, 5);
-//        printer.print(addTwoValuesWithReturn(2, 7));
+        printer.print(addTwoValuesWithReturn(2, 7));
     }
 
     public static void printSimpleText() {
@@ -20,11 +20,7 @@ public class App {
     }
 
     public static void addTwoValues(int firstValue, int secondValue) {
-//        printer.print(firstValue + secondValue);
-    }
-
-    public static void print(int text) {
-//        print(String.valueOf(text));
+        printer.print(firstValue + secondValue);
     }
 
     public static int addTwoValuesWithReturn(int firstValue, int secondValue) {
