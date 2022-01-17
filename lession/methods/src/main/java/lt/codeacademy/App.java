@@ -17,11 +17,14 @@ public class App {
     }
 
     public static void addTwoValues(int firstValue, int secondValue) {
-        print(firstValue + secondValue + "");
+        print(firstValue + secondValue);
     }
 
     public static void print(String text) {
         System.out.println(text);
     }
 
+    public static void print(int text) {
+        print(String.valueOf(text));
+    }
 }
