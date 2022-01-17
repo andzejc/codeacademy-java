@@ -9,9 +9,14 @@ public class App {
         }
         System.out.println("Trys");
         printSimpleText();
+        addTwoValues(1, 5);
     }
 
     public static void printSimpleText() {
         System.out.println("Keturi");
+    }
+
+    public static void addTwoValues(int firstValue, int secondValue) {
+        System.out.println(firstValue + secondValue);
     }
 }
