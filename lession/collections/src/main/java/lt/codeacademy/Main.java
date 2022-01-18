@@ -18,8 +18,9 @@ public class Main {
 
     /**
      * Method helps to add new value into simple array as new element.
-     * Init array: ["One", "Two"]
-     * Result array: ["One", "Two", "Three"]
+     * <br/><br/>
+     * Init array: ["One", "Two"]<br/>
+     * Result array: ["One", "Two", "Three"]<br/>
      *
      * @param currentArray String[] assigned an array that needs to be expanded for new value
      * @param value a any text
