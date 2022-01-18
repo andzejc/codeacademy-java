@@ -2,11 +2,11 @@ package lt.codeacademy;
 
 public class ConsolePrinter {
 
-    public void print(String text) {
+    public static void print(String text) {
         System.out.println(text);
     }
 
-    public void print(int text) {
+    public static void print(int text) {
         print(String.valueOf(text));
     }
 }
