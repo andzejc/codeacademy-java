@@ -1,9 +1,15 @@
 package lt.codeacademy;
 
 public enum Salis {
-    LT,LV,EE,PL;
+    LITHUANIA("LT"), ESTONIA("ES"), LATVIA("LV"), POLAND("PL"), GERMANY("DE"), UNITED_KINGDOM("UK");
+    public String location;
 
-    public String showLocale() {
-        return null;
-    }
+Salis(String location){
+ this.location = location;
 }
+    public String showLocation() {
+        return location;
+    }
+
+
+    }
