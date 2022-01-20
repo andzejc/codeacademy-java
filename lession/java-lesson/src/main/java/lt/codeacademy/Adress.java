@@ -11,7 +11,8 @@ public class Adress {
     public Adress() {
     }
 
-    public Adress( String miestas, String gatve, int namoNumeris) {
+    public Adress(Salis salis, String miestas, String gatve, int namoNumeris) {
+        this.salis = salis;
         this.miestas = miestas;
         this.gatve = gatve;
         this.namoNumeris = namoNumeris;
@@ -49,7 +50,7 @@ public class Adress {
         this.namoNumeris = namoNumeris;
     }
     public void showAdress(){
-        System.out.printf("Jusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.\n",miestas,gatve,namoNumeris);
+        System.out.printf("Jusu salis yra: %s \nJusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.\n",salis,miestas,gatve,namoNumeris);
     }
 
 
