@@ -38,4 +38,13 @@ public class Adresas {
     public void setButoNumeris(int butoNumeris) {
         this.butoNumeris = butoNumeris;
     }
+
+    @Override
+    public String toString() {
+        return "Adresas: " +
+                "Miestas = " + miestas +
+                "Gatve = " + gatve +
+                "Namo Numeris = " + namoNumeris +
+                "Buto Numeris = " + butoNumeris + " }";
+    }
 }
