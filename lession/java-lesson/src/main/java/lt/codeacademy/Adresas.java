@@ -1,12 +1,14 @@
 package lt.codeacademy;
 
 public class Adresas {
+    private Salis salis;
     private String miestas;
     private String gatve;
     private int namoNumeris;
     private int butoNumeris;
 
-    public Adresas(String miestas, String gatve, int namoNumeris, int butoNumeris){
+    public Adresas(Salis salis, String miestas, String gatve, int namoNumeris, int butoNumeris){
+        this.salis = salis;
         this.miestas = miestas;
         this.gatve = gatve;
         this.namoNumeris = namoNumeris;
@@ -14,7 +16,7 @@ public class Adresas {
     }
 
     public void showAddress(){
-        System.out.printf("Miestas: %s, gatve: %s, namo numeris: %d, buto numeris: %d\n", miestas, gatve, namoNumeris, butoNumeris);
+        System.out.printf("Salis: %s, Miestas: %s, gatve: %s, namo numeris: %d, buto numeris: %d\n",salis.showLocale(), miestas, gatve, namoNumeris, butoNumeris);
     }
 
     public String getMiestas() {
@@ -35,6 +37,14 @@ public class Adresas {
 
     public int getNamoNumeris() {
         return namoNumeris;
+    }
+
+    public Salis getSalis() {
+        return salis;
+    }
+
+    public void setSalis(Salis salis) {
+        this.salis = salis;
     }
 
     public void setNamoNumeris(int namoNumeris) {

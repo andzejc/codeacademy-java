@@ -9,7 +9,7 @@ public enum Salis {
         this.locale = locale;
     }
 
-    public void showLocale(){
-        System.out.println(locale);
+    public String showLocale(){
+        return locale;
     }
 }
