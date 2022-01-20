@@ -28,6 +28,9 @@ public class Adress {
     public void setNamoNumeris(int namoNumeris) {
         this.namoNumeris = namoNumeris;
     }
+    public void printInfo(){
+        System.out.printf("Jusu miestas yra : %s . Gatve %s namo numeris %s.",miestas,gatve,namoNumeris);
+    }
 
     @Override
     public String toString() {
