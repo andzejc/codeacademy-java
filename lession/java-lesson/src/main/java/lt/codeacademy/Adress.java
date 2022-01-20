@@ -3,6 +3,7 @@ package lt.codeacademy;
 import java.util.Scanner;
 
 public class Adress {
+    private Salis salis;
     private String miestas;
     private String gatve;
     private int namoNumeris;
@@ -10,10 +11,18 @@ public class Adress {
     public Adress() {
     }
 
-    public Adress(String miestas, String gatve, int namoNumeris) {
+    public Adress( String miestas, String gatve, int namoNumeris) {
         this.miestas = miestas;
         this.gatve = gatve;
         this.namoNumeris = namoNumeris;
+    }
+
+    public Salis getSalis() {
+        return salis;
+    }
+
+    public void setSalis(Salis salis) {
+        this.salis = salis;
     }
 
     public String getMiestas() {
@@ -42,15 +51,7 @@ public class Adress {
     public void showAdress(){
         System.out.printf("Jusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.\n",miestas,gatve,namoNumeris);
     }
-    public void setInfo(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Iveskite miesta: ");
-        this.miestas = sc.nextLine();
-        System.out.println("Iveskite gatve: ");
-        this.gatve = sc.nextLine();
-        System.out.println("Iveskite namo numeri: ");
-        this.namoNumeris = sc.nextInt();
-    }
+
 
     @Override
     public String toString() {
