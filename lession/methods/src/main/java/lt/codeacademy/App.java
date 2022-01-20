@@ -1,5 +1,6 @@
 package lt.codeacademy;
 
+
 public class App {
 
     static ConsolePrinter printer = new ConsolePrinter();
