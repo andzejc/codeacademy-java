@@ -7,7 +7,11 @@ public class Main {
         Adress adresas = new Adress("Vilnius","Gedimino",25);
 
         Adress adresas2 = new Adress();
-        
+        adresas2.setInfo();
+        adresas2.showAdress();
+        System.out.println("------------");
+        adresas.showAdress();
+
 
     }
 }

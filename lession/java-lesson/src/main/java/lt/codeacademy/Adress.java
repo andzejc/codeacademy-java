@@ -40,11 +40,16 @@ public class Adress {
         this.namoNumeris = namoNumeris;
     }
     public void showAdress(){
-        System.out.printf("Jusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.",miestas,gatve,namoNumeris);
+        System.out.printf("Jusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.\n",miestas,gatve,namoNumeris);
     }
-    public void setInfo(String miestas, String gatve, int namoNumeris){
+    public void setInfo(){
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Iveskite miesta: ");
+        this.miestas = sc.nextLine();
+        System.out.println("Iveskite gatve: ");
+        this.gatve = sc.nextLine();
+        System.out.println("Iveskite namo numeri: ");
+        this.namoNumeris = sc.nextInt();
     }
 
     @Override
@@ -55,4 +60,7 @@ public class Adress {
                 ", namoNumeris=" + namoNumeris +
                 '}';
     }
+
+
+
 }
