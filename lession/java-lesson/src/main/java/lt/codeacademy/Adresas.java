@@ -14,6 +14,6 @@ public class Adresas {
     }
 
     public void showAddress(){
-        System.out.printf("Miestas: %s, gatve: %s, namo numeris: %d, buto numeris: %d", miestas, gatve, namoNumeris, butoNumeris);
+        System.out.printf("Miestas: %s, gatve: %s, namo numeris: %d, buto numeris: %d\n", miestas, gatve, namoNumeris, butoNumeris);
     }
 }
