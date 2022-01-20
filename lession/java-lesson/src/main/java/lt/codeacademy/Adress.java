@@ -1,9 +1,20 @@
 package lt.codeacademy;
 
+import java.util.Scanner;
+
 public class Adress {
     private String miestas;
     private String gatve;
     private int namoNumeris;
+
+    public Adress() {
+    }
+
+    public Adress(String miestas, String gatve, int namoNumeris) {
+        this.miestas = miestas;
+        this.gatve = gatve;
+        this.namoNumeris = namoNumeris;
+    }
 
     public String getMiestas() {
         return miestas;
@@ -28,8 +39,12 @@ public class Adress {
     public void setNamoNumeris(int namoNumeris) {
         this.namoNumeris = namoNumeris;
     }
-    public void printInfo(){
-        System.out.printf("Jusu miestas yra : %s . Gatve %s namo numeris %s.",miestas,gatve,namoNumeris);
+    public void showAdress(){
+        System.out.printf("Jusu miestas yra : %10s. \nGatve: %10s.\nNamo numeris %4s.",miestas,gatve,namoNumeris);
+    }
+    public void setInfo(String miestas, String gatve, int namoNumeris){
+        Scanner sc = new Scanner(System.in);
+
     }
 
     @Override
