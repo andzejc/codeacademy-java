@@ -2,7 +2,9 @@ package lt.codeacademy;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Country country = Country.LITHUANIA;
+        System.out.println(country);
+
+
     }
-    //komentaras
 }
