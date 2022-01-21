@@ -7,7 +7,7 @@ public class Address {
     private int flatNumber;
     private Country country;
 
-    Address(Country country,String town, String street, int houseNumber, int flatNumber){
+    Address(Country country, String town, String street, int houseNumber, int flatNumber) {
         this.town = town;
         this.street = street;
         this.houseNumber = houseNumber;
@@ -58,4 +58,5 @@ public class Address {
     public void setFlatNumber(int flatNumber) {
         this.flatNumber = flatNumber;
     }
+
 }
