@@ -1,17 +1,19 @@
 package lt.codeacademy;
 
 public class Address {
-    enum Country{
-        LITHUANIA{ @Override public  String ReturnCountry(){return "LT";}},
-        LATVIA{ @Override public  String ReturnCountry(){return "LV";}},
-        ESTONIA{ @Override public  String ReturnCountry(){return "EE";}},
-        POLAND{ @Override public  String ReturnCountry(){return "PL";}};
-        public abstract String ReturnCountry();
-    }
+
     private String city;
     private String street;
     private int houseNumber;
     private int flatNumber;
+
+
+    public Address(String city, String street, int houseNumber, int flatNumber){
+        this.city = city;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.flatNumber = flatNumber;
+    }
 
     public String getCity() {
         return city;
@@ -43,6 +45,15 @@ public class Address {
 
     public void setFlatNumber(int flatNumber) {
         this.flatNumber = flatNumber;
+    }
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", houseNumber=" + houseNumber +
+                ", flatNumber=" + flatNumber +
+                '}';
     }
 
 
