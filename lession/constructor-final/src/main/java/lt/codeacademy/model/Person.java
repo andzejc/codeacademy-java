@@ -2,20 +2,25 @@ package lt.codeacademy.model;
 
 public class Person {
 
+    private static final String NONE_PERSONAL_CODE = "NONE";
+
     private String name;
     private String personalCode;
     private boolean sex;
 
     public Person() {
-        System.out.println("Init default constructor!");
-        this.sex = false;
+        this(false);
+    }
+
+    public Person(boolean sex) {
+        this.sex = sex;
+        this.personalCode = NONE_PERSONAL_CODE;
+        this.name = "";
     }
 
     public Person(String name) {
-        this();
+        this(true);
         this.name = name;
-        System.out.println("Init param constructor!");
-        this.sex = true;
     }
 
     public void setName(String name) {
@@ -24,5 +29,13 @@ public class Person {
 
     public boolean isSex() {
         return sex;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPersonalCode() {
+        return personalCode;
     }
 }
