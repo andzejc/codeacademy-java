@@ -8,6 +8,7 @@ public class Lession8 {
 
     public Lession8() {
         person = new Person();
+        System.out.println(person);
     }
 
     public void init() {
