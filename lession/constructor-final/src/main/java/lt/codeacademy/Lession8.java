@@ -4,9 +4,13 @@ import lt.codeacademy.model.Person;
 
 public class Lession8 {
 
-    public Lession8() {
+    private final Person person;
 
-        Person person = new Person();
-        Person person1 = new Person("Vardenis");
+    public Lession8() {
+        person = new Person("Vardenis");
+    }
+
+    public void init() {
+        System.out.println(person.isSex());
     }
 }
