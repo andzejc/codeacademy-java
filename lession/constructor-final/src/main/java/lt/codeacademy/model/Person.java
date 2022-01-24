@@ -5,8 +5,8 @@ public class Person {
     private static final String NONE_PERSONAL_CODE = "NONE";
 
     private String name;
-    private String personalCode;
-    private boolean sex;
+    private final String personalCode;
+    private final boolean sex;
 
     public Person() {
         this(false);
