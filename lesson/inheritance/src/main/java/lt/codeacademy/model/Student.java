@@ -1,9 +1,6 @@
 package lt.codeacademy.model;
 
-public class Student {
+public class Student extends Person {
 
-    private String name;
-    private String surname;
     private GroupType groupType;
-
 }
