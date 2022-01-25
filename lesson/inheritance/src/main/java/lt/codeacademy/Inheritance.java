@@ -14,10 +14,7 @@ public class Inheritance {
         Student student = new Student("Vardenis", "Pavardenis", GroupType.C2);
         Teacher teacher = new Teacher("Petras", "Mokytojas");
 
-        System.out.println(student.toString());
-        System.out.println(student.getName()
-                + " " + student.getSurname()
-                + " " + student.getGroupTypeAsString());
-        System.out.println(teacher.getName() + " " + teacher.getSurname());
+        System.out.println(student);
+        System.out.println(teacher);
     }
 }

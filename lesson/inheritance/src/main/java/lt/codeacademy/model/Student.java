@@ -25,4 +25,11 @@ public class Student extends Person {
     public String getName() {
         return "Studento vardas: " + super.getName();
     }
+
+    @Override
+    public String toString() {
+        return "Student info: " + getName()
+                + " " + getSurname()
+                + " " + this.getGroupTypeAsString();
+    }
 }
