@@ -16,7 +16,7 @@ public class Inheritance {
 
         System.out.println(student.getName()
                 + " " + student.getSurname()
-                + " " + student.getGroupType().getType());
+                + " " + student.getGroupTypeAsString());
         System.out.println(teacher.getName() + " " + teacher.getSurname());
     }
 }

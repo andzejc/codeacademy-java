@@ -17,7 +17,7 @@ public class Student extends Person {
         this.groupType = groupType;
     }
 
-    public GroupType getGroupType() {
-        return groupType;
+    public String getGroupTypeAsString() {
+        return groupType.getType();
     }
 }
