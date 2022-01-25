@@ -10,5 +10,6 @@ public class Inheritance {
 
     public void init() {
         Student student = new Student();
+        Student student1 = new Student("Vardenis", "Pavardenis");
     }
 }
