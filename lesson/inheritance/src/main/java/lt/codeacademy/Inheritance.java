@@ -3,18 +3,20 @@ package lt.codeacademy;
 import lt.codeacademy.model.GroupType;
 import lt.codeacademy.model.Student;
 import lt.codeacademy.model.Teacher;
-
-import java.util.Scanner;
+import lt.codeacademy.service.PersonManager;
 
 public class Inheritance {
 
-    private Scanner scanner = new Scanner(System.in);
+    PersonManager personManager;
+
+    public Inheritance() {
+        personManager = new PersonManager();
+    }
 
     public void init() {
-        Student student = new Student("Vardenis", "Pavardenis", GroupType.C2);
-        Teacher teacher = new Teacher("Petras", "Mokytojas");
+        personManager.addPerson(new Student("Vardenis", "Pavardenis", GroupType.C2));
+        personManager.addPerson(new Teacher("Petras", "Mokytojas"));
 
-        System.out.println(student);
-        System.out.println(teacher);
+        System.out.println(personManager.getAll());
     }
 }
