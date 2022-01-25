@@ -23,4 +23,9 @@ public class Person {
     public String getSurname() {
         return surname;
     }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getSurname();
+    }
 }

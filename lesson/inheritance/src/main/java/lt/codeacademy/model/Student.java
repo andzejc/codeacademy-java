@@ -28,8 +28,6 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student info: " + getName()
-                + " " + getSurname()
-                + " " + this.getGroupTypeAsString();
+        return "Student info: " + super.toString() + " " + this.getGroupTypeAsString();
     }
 }

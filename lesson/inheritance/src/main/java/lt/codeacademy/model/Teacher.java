@@ -11,6 +11,6 @@ public class Teacher extends Person {
 
     @Override
     public String toString() {
-        return "Teacher info: " + getName() + " " + getSurname();
+        return "Teacher info: " + super.toString();
     }
 }
