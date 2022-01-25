@@ -20,4 +20,9 @@ public class Student extends Person {
     public String getGroupTypeAsString() {
         return groupType.getType();
     }
+
+    @Override
+    public String getName() {
+        return "Studento vardas: " + super.getName();
+    }
 }
