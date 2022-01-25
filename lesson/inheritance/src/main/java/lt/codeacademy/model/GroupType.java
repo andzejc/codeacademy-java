@@ -2,6 +2,7 @@ package lt.codeacademy.model;
 
 public enum GroupType {
 
+    NONE("Nera grupės"),
     C1("Kursas 1"),
     C2("Kursas 2"),
     C3("Kursas 3"),

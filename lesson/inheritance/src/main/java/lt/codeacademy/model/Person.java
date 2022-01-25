@@ -6,7 +6,8 @@ public class Person {
     private String surname;
 
     public Person() {
-        System.out.println("Person is created from default constructor");
+        this.name = "-";
+        this.surname = "-";
     }
 
     public Person(String name, String surname) {
