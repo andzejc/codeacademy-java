@@ -6,11 +6,11 @@ public class B {
     int someInt;
     protected int d;
 
-    B b = new B();
+//    B b = new B();
     public void addAge(int newAge) {
-        age = age + newAge;
-        b.age = 20;
-        b.getAge();
+//        age = age + newAge;
+//        b.age = 20;
+//        b.getAge();
     }
 
     public int getAge() {
