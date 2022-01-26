@@ -17,4 +17,13 @@ public class A {
         CONST = "";
         System.out.println("Initialize static block");
     }
+
+    B newB = new B();
+
+    private void doSomeStuff() {
+        newB.getAge();
+        newB.addAge(10);
+        B b = new B();
+        b.someInt = 20;
+    }
 }
