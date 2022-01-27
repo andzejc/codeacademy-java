@@ -1,11 +1,19 @@
 package lt.codeacademy;
 
+import test.A;
+
 public class Lion extends NewAnimal{
 
     int a;
     int b = 20;
 
-    private void lionMethod() {
+    public static void main(String[] args) {
+        lionMethod();
+    }
+    private static void lionMethod() {
+        System.out.println(A.getJumpHeight());
+        System.out.println("12");
+        System.out.println("13");
 
     }
 
@@ -22,6 +30,21 @@ public class Lion extends NewAnimal{
     @Override
     public void newMethod() {
         Lion animal = new Lion();
+    }
+
+    @Override
+    public void printA() {
+
+    }
+
+    @Override
+    public void getB() {
+
+    }
+
+    @Override
+    public void getC() {
+
     }
 
 

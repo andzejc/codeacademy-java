@@ -1,6 +1,8 @@
 package lt.codeacademy;
 
-public abstract class Animal {
+import test.A;
+
+public abstract class Animal implements A {
 
     int s;
     int ss = 10;
