@@ -1,17 +1,17 @@
-package lt.codeacademy.model.employee.developers;
+package lt.codeacademy.model.employee.manager;
 
 import lt.codeacademy.model.employee.DutyType;
 import lt.codeacademy.model.employee.Employee;
 
-public class Developer extends Employee {
+public class Manager extends Employee {
 
-    public Developer(String name) {
-        super(name, DutyType.DEVELOPER);
+    protected Manager(String name) {
+        super(name, DutyType.MANAGER);
     }
 
     @Override
     public boolean hasAccessForParking() {
-        return false;
+        return true;
     }
 
     @Override
@@ -21,6 +21,6 @@ public class Developer extends Employee {
 
     @Override
     public boolean couldOrderCar() {
-        return false;
+        return true;
     }
 }

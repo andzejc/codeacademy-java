@@ -1,19 +1,24 @@
 package lt.codeacademy.model.employee;
 
+import lt.codeacademy.interfaces.HasAdvancedPrivilege;
 import lt.codeacademy.interfaces.HasDuty;
 import lt.codeacademy.interfaces.Likeable;
 import lt.codeacademy.interfaces.Nameble;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Abstraction of employee that can get and give likes and has a duty within the company
  */
-public class Employee implements HasDuty, Nameble, Likeable {
+public abstract class Employee implements HasDuty, Nameble, Likeable, HasAdvancedPrivilege {
 
-    private int numberOfLikes = 0;
     private final String name;
     private final DutyType dutyType;
 
-    public Employee(String name, DutyType dutyType) {
+    private final List<Employee> likeGivers = new ArrayList<>();
+
+    protected Employee(String name, DutyType dutyType) {
         this.name = name;
         this.dutyType = dutyType;
     }
@@ -30,11 +35,15 @@ public class Employee implements HasDuty, Nameble, Likeable {
 
     @Override
     public int getNumberOfLikes() {
-        return numberOfLikes;
+        return likeGivers.size();
     }
 
     @Override
-    public void giveLike() {
-        this.numberOfLikes++;
+    public void giveLike(Employee giver) {
+        likeGivers.add(giver);
+    }
+
+    public List<Employee> getLikeGivers() {
+        return likeGivers;
     }
 }

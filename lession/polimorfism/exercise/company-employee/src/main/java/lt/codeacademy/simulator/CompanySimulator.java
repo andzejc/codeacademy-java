@@ -24,13 +24,27 @@ public final class CompanySimulator {
                 + manager.getTotalLikesByDuty(employees.values(), null));
         giveLike(employees.get("PM-1"), employees.get("PM-2"));
         getNumberOfLikes(employees.get("PM-1"));
+        getEmployeeLikeGivers(employees.get("PM-1"));
         giveLike(employees.get("JD-1"), employees.get("MD-1"));
         getNumberOfLikes(employees.get("JD-1"));
         giveLike(employees.get("SD-1"), employees.get("MD-1"));
+        giveLike(employees.get("SD-1"), employees.get("JD-1"));
+        giveLike(employees.get("SD-1"), employees.get("PM-1"));
         getNumberOfLikes(employees.get("SD-1"));
+        getEmployeeLikeGivers(employees.get("SD-1"));
+        print("--------------------------------------------------------");
         print("Total likes given right now: " + manager.getTotalLikesByDuty(employees.values(), null));
         print("Total likes developers given: " + manager.getTotalLikesByDuty(employees.values(), DutyType.DEVELOPER));
         print("Total likes managers given: " + manager.getTotalLikesByDuty(employees.values(), DutyType.MANAGER));
+    }
+
+    private void getEmployeeLikeGivers(Employee employee) {
+        print("+++++++++++++++");
+        print(employee.getName() + " has given likes from:");
+        for (Employee giver: employee.getLikeGivers()) {
+            print(" * " + giver.getName());
+        }
+        print("+++++++++++++++");
     }
 
     private void getNumberOfLikes(Employee employee) {
@@ -39,7 +53,7 @@ public final class CompanySimulator {
     }
 
     private void giveLike(Employee receiver, Employee giver) {
-        manager.giveLike(receiver);
+        manager.giveLike(receiver, giver);
         print(giver.getName() + " liked another person: " + receiver.getName());
     }
 }
