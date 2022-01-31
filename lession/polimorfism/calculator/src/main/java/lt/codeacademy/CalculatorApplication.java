@@ -3,6 +3,7 @@ package lt.codeacademy;
 import lt.codeacademy.service.Calculator;
 import lt.codeacademy.service.SubstractCalculator;
 import lt.codeacademy.service.SumCalculator;
+import lt.codeacademy.service.SumCalculatorV2;
 
 public class CalculatorApplication {
 
@@ -12,6 +13,16 @@ public class CalculatorApplication {
 
         doCalculatorOperation(sumCalculator);
         doCalculatorOperation(substractCalculator);
+
+        doOtherCalc();
+    }
+
+    public void doOtherCalc() {
+        Calculator sumCalculatorV2 = new SumCalculatorV2(1, 1);
+        doCalculatorOperation(sumCalculatorV2);
+
+        Calculator sumCalculatorV3 = new SumCalculatorV2(1, 1);
+        doCalculatorOperation(sumCalculatorV3);
     }
 
     public void doCalculatorOperation(Calculator calculator) {

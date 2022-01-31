@@ -1,17 +1,13 @@
 package lt.codeacademy.service;
 
-public class SumCalculator implements Calculator {
-
-    private final int value1;
-    private final int value2;
+public final class SumCalculator extends CalculatorCommon implements Calculator {
 
     public SumCalculator(int value1, int value2) {
-        this.value1 = value1;
-        this.value2 = value2;
+        super(value1, value2);
     }
 
     @Override
     public int doOperationWithTwoDigits() {
-        return value1 + value2;
+        return getValue1() + getValue2();
     }
 }
