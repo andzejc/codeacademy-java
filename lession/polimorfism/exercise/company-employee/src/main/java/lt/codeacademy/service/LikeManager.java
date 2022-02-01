@@ -20,10 +20,11 @@ public class LikeManager {
     }
 
     /**
-     * @param likeable where the like should be given
+     * @param receiver where the like should be given
+     * @param giver who gave the like
      */
-    public void giveLike(Likeable likeable) {
-        likeable.giveLike();
+    public void giveLike(Employee receiver, Employee giver) {
+        receiver.giveLike(giver);
     }
 
     /**
