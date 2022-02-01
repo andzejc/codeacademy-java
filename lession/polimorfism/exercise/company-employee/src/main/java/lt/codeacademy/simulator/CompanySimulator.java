@@ -32,6 +32,7 @@ public final class CompanySimulator {
         giveLike(employees.get("SD-1"), employees.get("PM-1"));
         getNumberOfLikes(employees.get("SD-1"));
         getEmployeeLikeGivers(employees.get("SD-1"));
+        print("--------------------------------------------------------");
         print("Total likes given right now: " + manager.getTotalLikesByDuty(employees.values(), null));
         print("Total likes developers given: " + manager.getTotalLikesByDuty(employees.values(), DutyType.DEVELOPER));
         print("Total likes managers given: " + manager.getTotalLikesByDuty(employees.values(), DutyType.MANAGER));

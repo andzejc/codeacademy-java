@@ -1,7 +1,7 @@
 package lt.codeacademy;
 
 import lt.codeacademy.model.employee.Employee;
-import lt.codeacademy.model.employee.ProjectManager;
+import lt.codeacademy.model.employee.manager.ProjectManager;
 import lt.codeacademy.model.employee.developers.JuniorDeveloper;
 import lt.codeacademy.model.employee.developers.MidDeveloper;
 import lt.codeacademy.model.employee.developers.SeniorDeveloper;
