@@ -17,8 +17,6 @@ public abstract class Employee implements HasDuty, Nameble, Likeable, HasAdvance
     private final DutyType dutyType;
     private final List<Employee> likeGivers = new ArrayList<>();
 
-    private final List<Employee> likeGivers = new ArrayList<>();
-
     protected Employee(String name, DutyType dutyType) {
         this.name = name;
         this.dutyType = dutyType;
