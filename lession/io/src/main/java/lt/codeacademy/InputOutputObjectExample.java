@@ -12,5 +12,8 @@ public class InputOutputObjectExample {
                 PERSON_FILE,
                 new Person("Antanas", "Antanaitis", 20)
         );
+
+        Person personObjFromFile = (Person) FileUtils.readFromFile(PERSON_FILE);
+        System.out.println(personObjFromFile.toString());
     }
 }
