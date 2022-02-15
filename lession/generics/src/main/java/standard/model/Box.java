@@ -1,14 +1,14 @@
 package standard.model;
 
-public class Box {
+public class Box<T> {
 
-    private Object object;
+    private T object;
 
-    public Object getObject() {
+    public T getObject() {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 }
