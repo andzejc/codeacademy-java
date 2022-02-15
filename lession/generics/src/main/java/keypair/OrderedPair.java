@@ -1,6 +1,6 @@
 package keypair;
 
-public class OrderedPair<V, K> implements Pair<K, V> {
+public class OrderedPair<K, V> implements Pair<K, V> {
 
     private final K key;
     private final V value;
