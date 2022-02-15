@@ -1,8 +1,9 @@
-import standard.StandardManager;
+import task1.TaskImpl;
 
 public class App {
 
     public static void main(String[] args) {
-        StandardManager.init();
+//        StandardManager.init();
+        TaskImpl.init();
     }
 }
