@@ -1,4 +1,4 @@
-import task2.Task2Impl;
+import inheritance.Inheritance;
 
 public class App {
 
@@ -6,6 +6,7 @@ public class App {
 //        StandardManager.init();
 //        TaskImpl.init();
 //        KeyPairImpl.init();
-          Task2Impl.init();
+//        Task2Impl.init();
+        Inheritance.init();
     }
 }

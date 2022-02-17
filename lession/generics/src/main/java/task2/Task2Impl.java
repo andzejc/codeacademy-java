@@ -10,5 +10,4 @@ public class Task2Impl {
         printer.printArray(digits);
         printer.printArray(texts);
     }
-
 }
