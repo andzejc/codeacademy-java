@@ -16,7 +16,7 @@ public class Inheritance {
         ///
     }
 
-    public static void doSomething(Generic<? extends A> obj) {
+    public static void doSomething(Generic<?> obj) {
         ///
     }
 
