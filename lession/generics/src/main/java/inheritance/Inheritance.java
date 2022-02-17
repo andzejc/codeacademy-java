@@ -9,14 +9,14 @@ public class Inheritance {
         Generic<A> gA = new Generic<>();
         Generic<B> gB = new Generic<>();
         doSomething(gA);
-        doSomething(gB);  //throw compile exception
+        doSomething(gB);
     }
 
     public static void doSomething(A obj) {
         ///
     }
 
-    public static void doSomething(Generic<A> obj) {
+    public static <T extends A> void doSomething(Generic<T> obj) {
         ///
     }
 
@@ -28,7 +28,5 @@ public class Inheritance {
     }
 
     static class Generic<T> {
-
     }
-
 }
