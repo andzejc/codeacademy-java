@@ -8,25 +8,25 @@ public class Inheritance {
 
         Generic<A> gA = new Generic<>();
         Generic<B> gB = new Generic<>();
+        Generic<C> gC = new Generic<>();
         doSomething(gA);
         doSomething(gB);
+        doSomethingDownCast(gC);
+        doSomethingDownCast(gB); // compile exception
+        doSomethingDownCast(gA);
     }
 
-    public static void doSomething(A obj) {
-        ///
-    }
+    public static void doSomething(A obj) {}
 
-    public static void doSomething(Generic<?> obj) {
-        ///
-    }
+    public static void doSomething(Generic<?> obj) {}
 
-    static class A {
-    }
+    public static void doSomethingDownCast(Generic<? super C> obj) {}
 
-    static class B extends A {
+    static class A {}
 
-    }
+    static class B extends A {}
 
-    static class Generic<T> {
-    }
+    static class C extends A {}
+
+    static class Generic<T> {}
 }
