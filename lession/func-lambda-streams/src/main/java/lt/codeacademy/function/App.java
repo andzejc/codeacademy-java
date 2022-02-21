@@ -15,6 +15,19 @@ public class App {
         System.out.println(funcObj.apply(twoValueStorage)); // 5
 
         System.out.println(sum().apply(2, 3)); // 5
+
+
+        // -----------------------
+        Function<String, String> addBrackets = (anything) -> "(" + anything + ")";
+        System.out.println("addBrackets apply: " + addBrackets.apply("whatEver"));
+
+        Function<String, String> addTripleDots = value -> value + "...";
+
+        String formattedTextWithNestedFunctions = addBrackets // order matters here
+                .andThen(addTripleDots)
+                .apply("functions are so cool");
+
+        System.out.println(formattedTextWithNestedFunctions);
     }
 
     public static BiFunction<Integer, Integer, Integer> sum() {
