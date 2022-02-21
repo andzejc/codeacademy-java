@@ -24,5 +24,12 @@ public class App {
         // Make it shorter
         Interfeisas lambdaAnonimShort = (int sk1, int sk2) -> "" + (sk1 + sk2);
         System.out.println(lambdaAnonimShort.sumok(2, 3)); // 5
+
+        
+        Interfeisas2 example2 = (int sk1, int sk2) -> sk1 + sk2;
+        System.out.println(example2.sumok(2, 3)); // 5
+
+        Interfeisas2 exampleWithMethodReference = Integer::sum;
+        System.out.println(exampleWithMethodReference.sumok(2, 3)); // 5
     }
 }
