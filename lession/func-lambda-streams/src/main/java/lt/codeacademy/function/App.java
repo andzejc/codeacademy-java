@@ -4,6 +4,7 @@ import lt.codeacademy.function.model.TwoValueStorage;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class App {
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class App {
         System.out.println(sum().apply(2, 3)); // 5
 
 
-        // -----------------------
+        // Nesting with Function -----------------------
         Function<String, String> addBrackets = (anything) -> "(" + anything + ")";
         System.out.println("addBrackets apply: " + addBrackets.apply("whatEver"));
 
@@ -28,6 +29,15 @@ public class App {
                 .apply("functions are so cool");
 
         System.out.println(formattedTextWithNestedFunctions);
+
+        // Predicate
+        Predicate<String> notNull = value -> value != null;
+        System.out.println("this is not null: " + notNull.test("I am not null"));
+        System.out.println("this is null: " + notNull.test(null));
+        boolean result = notNull
+                .and(notNull)
+                .or(notNull)
+                .test(null);
     }
 
     public static BiFunction<Integer, Integer, Integer> sum() {
