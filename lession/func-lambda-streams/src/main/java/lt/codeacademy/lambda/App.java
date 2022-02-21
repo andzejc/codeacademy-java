@@ -1,4 +1,4 @@
-package lt.codeacademy;
+package lt.codeacademy.lambda;
 
 public class App {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class App {
         Interfeisas lambdaAnonimShort = (int sk1, int sk2) -> "" + (sk1 + sk2);
         System.out.println(lambdaAnonimShort.sumok(2, 3)); // 5
 
-        
+
         Interfeisas2 example2 = (int sk1, int sk2) -> sk1 + sk2;
         System.out.println(example2.sumok(2, 3)); // 5
 

@@ -1,4 +1,4 @@
-package lt.codeacademy;
+package lt.codeacademy.lambda;
 
 @FunctionalInterface
 public interface Interfeisas {
