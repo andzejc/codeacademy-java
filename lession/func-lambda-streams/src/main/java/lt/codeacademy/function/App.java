@@ -14,7 +14,10 @@ public class App {
         Function<TwoValueStorage, Integer> funcObj = new ApplyObject();
         System.out.println(funcObj.apply(twoValueStorage)); // 5
 
-        BiFunction<Integer, Integer, Integer> sum = (a, b) -> Integer.sum(a, b);
-        System.out.println(sum.apply(2, 3)); // 5
+        System.out.println(sum().apply(2, 3)); // 5
+    }
+
+    public static BiFunction<Integer, Integer, Integer> sum() {
+        return (a, b) -> Integer.sum(a, b);
     }
 }
