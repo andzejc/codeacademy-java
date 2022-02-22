@@ -21,7 +21,12 @@ public class App {
         // Stream MAP
         stringNumbers.stream()
                 .map((s) -> s.toLowerCase())
-                .forEach(s -> System.out.println("Number word after mapping: " + s));
+                .forEach(s -> System.out.println(s));
+
+        // use method reference
+        stringNumbers.stream()
+                .map(String::toLowerCase)
+                .forEach(System.out::println);
 
     }
 }
