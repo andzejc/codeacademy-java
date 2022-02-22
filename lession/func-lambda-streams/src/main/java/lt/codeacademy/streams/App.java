@@ -23,6 +23,7 @@ public class App {
                 .map((s) -> s.toLowerCase())
                 .forEach(s -> System.out.println(s));
 
+        System.out.println("------------------");
         // use method reference
         stringNumbers.stream()
                 .map(String::toLowerCase)
@@ -30,6 +31,11 @@ public class App {
                 .map(s -> s.substring(2))
                 .forEach(System.out::println);
 
-
+        System.out.println("------- Filter -----------");
+        // Stream FILTER
+        stringNumbers.stream()
+                .filter(s -> s.length() > 3)
+                .map(s -> s.toLowerCase())
+                .forEach(System.out::println);
     }
 }
