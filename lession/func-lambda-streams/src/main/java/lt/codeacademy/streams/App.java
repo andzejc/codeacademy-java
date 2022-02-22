@@ -1,6 +1,7 @@
 package lt.codeacademy.streams;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class App {
@@ -37,5 +38,12 @@ public class App {
                 .filter(s -> s.length() > 3)
                 .map(s -> s.toLowerCase())
                 .forEach(System.out::println);
+
+        System.out.println("------- Map + Collection -----------");
+        List<String> stringNumbersFiltered = stringNumbers.stream()
+                .filter(s -> s.length() > 3)
+                .collect(Collectors.toList());
+
+        stringNumbersFiltered.forEach(System.out::println);
     }
 }
