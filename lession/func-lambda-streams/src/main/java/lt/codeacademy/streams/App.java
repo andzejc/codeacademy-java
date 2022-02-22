@@ -2,7 +2,6 @@ package lt.codeacademy.streams;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class App {
 
@@ -14,10 +13,6 @@ public class App {
                 "FOUR",
                 "FIVE"
         );
-
-        Stream<String> stringNumbersStream = stringNumbers.stream();
-
-        // do anything with Stream
 
         // Stream MAP
         stringNumbers.stream()
