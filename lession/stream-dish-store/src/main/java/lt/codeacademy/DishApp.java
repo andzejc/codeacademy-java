@@ -8,8 +8,7 @@ public class DishApp {
     private final DishService dishService = new DishService(new DishFactory());
 
     public void run() {
-        dishService.getAll()
-                .forEach(dish -> System.out.println(dish.toString()));
+
     }
 
 }
