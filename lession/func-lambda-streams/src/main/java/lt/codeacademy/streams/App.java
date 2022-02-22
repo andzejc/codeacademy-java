@@ -1,6 +1,7 @@
 package lt.codeacademy.streams;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -52,5 +53,29 @@ public class App {
                 .collect(Collectors.toList());
         num1Long.forEach(System.out::println);
 
+        // Stream REDUCE
+        System.out.println("------- REDUCE -----------");
+        Integer result = num1.stream()
+                .reduce(0, (value, amount) -> amount += value);
+        System.out.println(result);
+
+        System.out.println("------- REDUCE SHORT VERSION -----------");
+        Integer result2 = num1.stream()
+                .reduce(0, Integer::sum);
+        System.out.println(result2);
+
+        System.out.println("------- MIN & MAX -----------");
+        List<Integer> numbers = List.of(90, 100, 70, 200);
+        Optional<Integer> maxNumber = numbers.stream()
+                .max(Integer::compareTo); // same as (value1, value2) -> value1.compareTo(value2))
+        System.out.println("Max value: " + maxNumber.get());
+        System.out.println("Min value: " + numbers.stream().min(Integer::compareTo).get());
+
+        List<Integer> emptyNumbers = List.of();
+        Integer emptyNumberResult = emptyNumbers.stream()
+                .max(Integer::compareTo)
+//                .orElseThrow(() -> new MyException("no number in list"));
+                .orElse(0);
+        System.out.println(emptyNumberResult);
     }
 }
