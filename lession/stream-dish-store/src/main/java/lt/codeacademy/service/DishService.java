@@ -1,5 +1,6 @@
 package lt.codeacademy.service;
 
+import lt.codeacademy.dto.DishDto;
 import lt.codeacademy.factory.DishFactory;
 import lt.codeacademy.model.Dish;
 
@@ -12,7 +13,7 @@ public class DishService {
     private final List<Dish> dishes;
 
     public DishService(DishFactory factory) {
-        this.dishes = factory.getAvailableDishes();
+        this.dishes = factory.getDishes();
     }
 
     public Set<Dish> getAll() {
