@@ -26,7 +26,10 @@ public class App {
         // use method reference
         stringNumbers.stream()
                 .map(String::toLowerCase)
+                .map(s -> s + "a")
+                .map(s -> s.substring(2))
                 .forEach(System.out::println);
+
 
     }
 }
