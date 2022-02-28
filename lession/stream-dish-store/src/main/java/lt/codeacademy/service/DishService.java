@@ -8,6 +8,7 @@ import lt.codeacademy.model.Dish;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class DishService {
@@ -37,4 +38,12 @@ public class DishService {
                 .map(dish -> dishMapper.toDto(dish))
                 .collect(Collectors.toList());
     }
+
+    public List<DishDto> getDishByPrice(Predicate<? super Dish> predicate) {
+        return dishes.stream()
+                .filter(predicate)
+                .map(dish -> dishMapper.toDto(dish))
+                .collect(Collectors.toList());
+    }
+
 }
