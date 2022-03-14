@@ -1,13 +1,18 @@
 package lt.codeacademy.db.jdbc;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class App {
+    public static void main(String[] args) {
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:postgresql://localhost:5432/postgres",
+                    "postgres",
+                    "");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
