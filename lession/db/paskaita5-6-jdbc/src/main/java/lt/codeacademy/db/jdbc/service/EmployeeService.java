@@ -23,10 +23,11 @@ public class EmployeeService {
                 employees.add(Employee.builder()
                                 .id(resultSet.getLong("id"))
                                 .name(resultSet.getString("name"))
-                                // TODO:
-
-
-
+                                .salary(resultSet.getBigDecimal("salary"))
+                                .employmentDate(resultSet.getDate("employment_date"))
+                                .surname(resultSet.getString("surname"))
+                                .jobTitle(resultSet.getString("job_title"))
+                                .personalCode(resultSet.getString("personal_code"))
                         .build());
             }
             employees.forEach(System.out::println);
