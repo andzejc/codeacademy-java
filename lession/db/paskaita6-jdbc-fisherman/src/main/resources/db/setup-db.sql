@@ -61,3 +61,9 @@ ALTER TABLE fisherman.fisherman
             REFERENCES fisherman.hook_size (id)
             ON DELETE CASCADE
             ON UPDATE CASCADE;
+
+
+Insert into fisherman.hook_size (id, name)
+values (1, 'SMALL'),
+       (2, 'MEDIUM'),
+       (3, 'LARGE');
