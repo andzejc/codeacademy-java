@@ -45,6 +45,30 @@ public class EmployeeService {
         employees.forEach(System.out::println);
     }
 
+    public void changeEmployeeNameById(Long id, String name) throws SQLException {
+        try {
+            connection.setAutoCommit(false);
+            PreparedStatement statement = connection
+                    .prepareStatement("UPDATE paskaita5.employee SET name = ? WHERE id = ?");
+            statement.setString(1, name);
+            statement.setLong(2, id);
+            int result = statement.executeUpdate();
+
+            statement = connection
+                    .prepareStatement("UPDATE paskaita5.employee SET name = ? WHERE id = ?");
+            statement.setString(1, name + "a");
+            statement.setLong(2, id);
+
+            result = statement.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            throw new SQLException(e);
+        } finally {
+            connection.setAutoCommit(true);
+        }
+    }
+
     public List<Employee> findEmployeeByDate(LocalDate date) {
         try {
             PreparedStatement statement = connection
