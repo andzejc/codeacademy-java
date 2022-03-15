@@ -21,24 +21,28 @@ public class EmployeeService {
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM paskaita5.employee");
-            List<Employee> employees = new ArrayList<>();
-            while (resultSet.next()) {
-                employees.add(Employee.builder()
-                                .id(resultSet.getLong("id"))
-                                .name(resultSet.getString("name"))
-                                .salary(resultSet.getBigDecimal("salary"))
-                                .employmentDate(resultSet.getDate("employment_date"))
-                                .surname(resultSet.getString("surname"))
-                                .jobTitle(resultSet.getString("job_title"))
-                                .personalCode(resultSet.getString("personal_code"))
-                        .build());
-            }
-            employees.forEach(System.out::println);
+            printData(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         return null;
+    }
+
+    private void printData(ResultSet resultSet) throws SQLException {
+        List<Employee> employees = new ArrayList<>();
+        while (resultSet.next()) {
+            employees.add(Employee.builder()
+                            .id(resultSet.getLong("id"))
+                            .name(resultSet.getString("name"))
+                            .salary(resultSet.getBigDecimal("salary"))
+                            .employmentDate(resultSet.getDate("employment_date"))
+                            .surname(resultSet.getString("surname"))
+                            .jobTitle(resultSet.getString("job_title"))
+                            .personalCode(resultSet.getString("personal_code"))
+                    .build());
+        }
+        employees.forEach(System.out::println);
     }
 
     public List<Employee> findEmployeeByDate(LocalDate date) {
@@ -48,19 +52,7 @@ public class EmployeeService {
             statement.setDate(1, DateUtils.toSqlDate(date));
 
             ResultSet resultSet = statement.executeQuery();
-            List<Employee> employees = new ArrayList<>();
-            while (resultSet.next()) {
-                employees.add(Employee.builder()
-                        .id(resultSet.getLong("id"))
-                        .name(resultSet.getString("name"))
-                        .salary(resultSet.getBigDecimal("salary"))
-                        .employmentDate(resultSet.getDate("employment_date"))
-                        .surname(resultSet.getString("surname"))
-                        .jobTitle(resultSet.getString("job_title"))
-                        .personalCode(resultSet.getString("personal_code"))
-                        .build());
-            }
-            employees.forEach(System.out::println);
+            printData(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
