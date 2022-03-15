@@ -22,6 +22,7 @@ public abstract class DBService {
         try{
             statement = DB.createStatement();
             statement.execute("TRUNCATE TABLE fisherman.fisherman CASCADE");
+            statement.execute("TRUNCATE TABLE fisherman.fish CASCADE");
         } catch (SQLException e) {
             throw new RuntimeException(e.getMessage());
         }
