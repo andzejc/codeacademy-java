@@ -1,5 +1,8 @@
 package lt.codeacademy.db.fisherman.entity.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum HookSize {
     SMALL(1), MEDIUM(2), LARGE(3);
 
