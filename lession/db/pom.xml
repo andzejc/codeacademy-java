@@ -12,6 +12,7 @@
 
     <modules>
         <module>paskaita5-6-jdbc</module>
+        <module>paskaita6-jdbc-fisherman</module>
     </modules>
 
     <properties>
@@ -20,7 +21,8 @@
         <maven.compiler.target>11</maven.compiler.target>
         <com.h2database.h2.version>2.1.210</com.h2database.h2.version>
         <org.postgresql.postgresql.version>42.3.3</org.postgresql.postgresql.version>
-        <junit.version>4.11</junit.version>
+        <com.github.javafaker>1.0.2</com.github.javafaker>
+        <org.junit.jupiter>5.7.0</org.junit.jupiter>
     </properties>
 
     <dependencyManagement>
@@ -41,12 +43,22 @@
                 <version>1.18.22</version>
                 <scope>provided</scope>
             </dependency>
-
+            <dependency>
+                <groupId>com.github.javafaker</groupId>
+                <artifactId>javafaker</artifactId>
+                <version>${com.github.javafaker}</version>
+            </dependency>
 
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${org.junit.jupiter}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${org.junit.jupiter}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
