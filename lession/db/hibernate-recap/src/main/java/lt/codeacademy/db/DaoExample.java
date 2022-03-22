@@ -34,6 +34,8 @@ public class DaoExample {
         Optional<EmployeeEntity> employee = new EmployeeDao(session).findById(2L);
 
         if (employee.isPresent()) {
+            employee.get().setName("Edited");
+
             employeeDao.saveOrUpdate(employee.get());
         }
     }
