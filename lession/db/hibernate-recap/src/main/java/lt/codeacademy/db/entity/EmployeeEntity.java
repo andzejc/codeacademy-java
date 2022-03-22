@@ -1,5 +1,6 @@
 package lt.codeacademy.db.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,6 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employee")
 @ToString
+@Builder
 public class EmployeeEntity {
 
     @Id
