@@ -1,9 +1,9 @@
 package lt.codeacademy.db;
 
-import org.hibernate.cfg.Configuration;
+import lt.codeacademy.db.helper.DaoManager;
 
 public class App {
     public static void main(String[] args) {
-        new Configuration().configure().buildSessionFactory();
+        DaoManager.getSession();
     }
 }
