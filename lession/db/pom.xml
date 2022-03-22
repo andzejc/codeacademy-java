@@ -13,6 +13,9 @@
     <modules>
         <module>paskaita5-6-jdbc</module>
         <module>paskaita6-jdbc-fisherman</module>
+        <module>h2-project</module>
+        <module>hibernate</module>
+        <module>hibernate-recap</module>
     </modules>
 
     <properties>
