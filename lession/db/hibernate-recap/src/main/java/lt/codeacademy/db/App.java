@@ -1,7 +1,9 @@
 package lt.codeacademy.db;
 
+import org.hibernate.cfg.Configuration;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new Configuration().configure().buildSessionFactory();
     }
 }
