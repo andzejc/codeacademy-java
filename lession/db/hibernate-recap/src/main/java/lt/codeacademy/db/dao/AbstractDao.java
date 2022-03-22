@@ -10,7 +10,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public abstract class AbstractDao<T> {
 
-    private final Session session;
+    protected final Session session;
     private final Class<T> entityClass;
 
     public List<T> findAll() {

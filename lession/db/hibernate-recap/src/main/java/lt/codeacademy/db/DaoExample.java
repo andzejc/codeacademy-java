@@ -12,11 +12,14 @@ public class DaoExample {
     private static EmployeeDao employeeDao = null;
 
     public static void main(String[] args) {
+        // service layer
         try (Session session = DaoManager.getSession()) {
             employeeDao = new EmployeeDao(session);
             createNewEmployee(session);
             updateCurrentEmployee(session);
             deleteCurrentEmployee(session);
+
+            System.out.println(employeeDao.getByName("Alma"));
         }
     }
 
