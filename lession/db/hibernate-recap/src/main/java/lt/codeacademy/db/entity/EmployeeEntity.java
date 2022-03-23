@@ -9,9 +9,12 @@ import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Getter
@@ -39,4 +42,11 @@ public class EmployeeEntity {
 
     @Column(length = 8, name = "phone_number")
     private String phoneNumber;
+
+    @ManyToOne
+    //optional
+    @JoinColumn(name = "employee_type_id",
+            columnDefinition = "int default 1",
+            foreignKey = @ForeignKey(name = "employee_employee_type_id_to_employee_type_id_fkey"))
+    private EmployeeTypeEntity employeeType;
 }

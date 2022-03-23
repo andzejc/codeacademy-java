@@ -1,6 +1,7 @@
 package lt.codeacademy.db.helper;
 
 import lt.codeacademy.db.entity.EmployeeEntity;
+import lt.codeacademy.db.entity.EmployeeTypeEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -10,6 +11,7 @@ public class DaoManager {
     private static SessionFactory getSessionFactory() {
         Configuration cfg = HibernateHelper.initPostgresConfig();
         cfg.addAnnotatedClass(EmployeeEntity.class);
+        cfg.addAnnotatedClass(EmployeeTypeEntity.class);
 
         return cfg.buildSessionFactory();
     }
