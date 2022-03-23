@@ -12,7 +12,7 @@ public class HibernateHelper {
         cfg.setProperty("hibernate.connection.username", System.getProperty("dbUser"));
         cfg.setProperty("hibernate.connection.password", System.getProperty("dbPass"));
         cfg.setProperty("hibernate.show_sql", "true");
-        cfg.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+        cfg.setProperty("hibernate.hbm2ddl.auto", "validate");
 
         return cfg;
     }

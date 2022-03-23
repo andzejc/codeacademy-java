@@ -22,9 +22,9 @@ import java.util.List;
 public class CityEntity {
 
     @Id
-    private Long id;
+    private Integer id;
 
-    @Column(length = 20, nullable = false, name = "city_name")
+    @Column(name = "city_name")
     private String cityName;
 
     @ManyToMany(mappedBy = "cities")

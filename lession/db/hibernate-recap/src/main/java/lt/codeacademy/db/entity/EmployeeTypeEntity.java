@@ -4,24 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(
-        name = "employee_type",
-        // optional
-        uniqueConstraints = {
-                @UniqueConstraint(
-                        columnNames = {"name"},
-                        name="employee_type_key"
-                )
-        }
-)
+@Table(name = "employee_type")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,8 +17,6 @@ import javax.persistence.UniqueConstraint;
 public class EmployeeTypeEntity {
 
     @Id
-    private Long id;
-
-    @Column(length = 20, nullable = false)
+    private Integer id;
     private String name;
 }
