@@ -30,4 +30,13 @@ public class EmployeeEntity {
 
     @Column(length = 30, nullable = false)  // mostly used when hibernate.hbm2ddl.auto not validate
     private String name;
+
+    @Column(length = 50, nullable = false)
+    private String surname;
+
+    @Column(length = 30, nullable = false)
+    private String email;
+
+    @Column(length = 8, name = "phone_number")
+    private String phoneNumber;
 }

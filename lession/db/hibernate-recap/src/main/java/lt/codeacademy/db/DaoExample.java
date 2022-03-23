@@ -26,6 +26,8 @@ public class DaoExample {
     private static void createNewEmployee(Session session) {
         EmployeeEntity employee = EmployeeEntity.builder()
                 .name("Alma")
+                .surname("Almanaite")
+                .email("a@alma.lt")
                 .build();
         employeeDao.saveOrUpdate(employee);
     }
