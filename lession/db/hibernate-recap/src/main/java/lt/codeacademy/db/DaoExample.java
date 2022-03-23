@@ -2,9 +2,12 @@ package lt.codeacademy.db;
 
 import lt.codeacademy.db.dao.EmployeeDao;
 import lt.codeacademy.db.entity.EmployeeEntity;
+import lt.codeacademy.db.entity.report.EmployeeCitiesReport;
 import lt.codeacademy.db.helper.DaoManager;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
+import java.util.List;
 import java.util.Optional;
 
 public class DaoExample {
@@ -20,7 +23,16 @@ public class DaoExample {
             deleteCurrentEmployee(session);
 
             System.out.println(employeeDao.getByName("Alma"));
+
+            callReport(session);
         }
+    }
+
+    private static void callReport(Session session) {
+        Query<EmployeeCitiesReport> query = session.createQuery("from EmployeeCitiesReport", EmployeeCitiesReport.class);
+        List<EmployeeCitiesReport> result = query.list();
+
+        result.forEach(System.out::println);
     }
 
     private static void createNewEmployee(Session session) {
