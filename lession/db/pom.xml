@@ -16,6 +16,7 @@
         <module>h2-project</module>
         <module>hibernate</module>
         <module>hibernate-recap</module>
+        <module>jdbc-mongo</module>
     </modules>
 
     <properties>
